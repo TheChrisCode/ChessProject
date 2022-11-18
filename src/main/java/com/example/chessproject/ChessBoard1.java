@@ -45,7 +45,7 @@ public class ChessBoard1 extends Application {
             blackPawnImageView[i].setImage(blackPawnImage);
         }
         Image whitePawnImage = new Image(new FileInputStream("C:\\Users\\Christia.Phillips\\Documents\\Java Game\\ChessProject\\src\\main\\resources\\com\\example\\chessproject\\whitepawn.png"));
-        makeBlackPawns();
+        makeWhitePawns();
         for(int i = 0; i < 8; i++) {
             whitePawnImageView[i].setFitHeight(64);
             whitePawnImageView[i].setFitWidth(64);
@@ -100,6 +100,17 @@ public class ChessBoard1 extends Application {
                         if (pawnRules() == true) {
 
                             GridPane.setConstraints(blackPawnIdentity, columnIndex, rowIndex);
+                            isBlackTurn = false;
+                            pawnMove = false;
+
+
+                            pawnMoves[pawnMovesCounter]++;
+                        }
+                    } else {
+                        if (pawnRules() == true) {
+
+                            GridPane.setConstraints(blackPawnIdentity, columnIndex, rowIndex);
+                            isBlackTurn = true;
                             pawnMove = false;
 
 

@@ -9,7 +9,7 @@ import javafx.scene.layout.StackPane;
 
 public class Pawn extends ChessBoard1 {
 
-    public static int[] pawnMoves= new int[9];
+    public static int[] pawnMoves= new int[100];
     public static int pawnMovesCounter = 0;
     public static StackPane blackPawnIdentity;
     public static StackPane whitePawnIdentity;
@@ -38,7 +38,7 @@ public class Pawn extends ChessBoard1 {
             blackPawnIdentity = (StackPane) mouseEvent.getSource();
             whitePawnIdentity = (StackPane) mouseEvent.getSource();
             System.out.println("Checkpoint 1");
-            if (pawnMovesCounter == 8) {
+            if (pawnMovesCounter == 98) {
                 pawnMovesCounter = 0;
             }
 
